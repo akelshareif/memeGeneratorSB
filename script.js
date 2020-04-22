@@ -1,15 +1,22 @@
-const memeSpace = document.querySelector('#memeSpace');
 const form = document.querySelector('form');
+const memeSpace = document.querySelector('#memeSpace');
+let clickCount = 0;
 
-//imageContainer classes: relative position
-//image classes: set width
-//text classes: absolute position and place accordingly on image
+const handleImageClick = (image) => {
+    image.addEventListener('touchend', function (e) {
+        e.target.parentElement.remove();
+    });
+    image.addEventListener('click', function (e) {
+        e.target.parentElement.remove();
+    });
+};
 
 const createMeme = (imgURL, textInputs) => {
     const imgContainer = document.createElement('div');
     const img = document.createElement('img');
     const topText = document.createElement('div');
     const bottomText = document.createElement('div');
+    const overlay = document.createElement('div');
     topText.innerText = textInputs[0].value;
     bottomText.innerText = textInputs[1].value;
 
@@ -21,9 +28,14 @@ const createMeme = (imgURL, textInputs) => {
     topText.setAttribute('class', 'topTextStyles');
     bottomText.setAttribute('class', 'bottomTextStyles');
 
+    overlay.setAttribute('class', 'overlay');
+
     imgContainer.appendChild(topText);
     imgContainer.appendChild(img);
     imgContainer.appendChild(bottomText);
+    imgContainer.appendChild(overlay);
+
+    handleImageClick(imgContainer);
     memeSpace.appendChild(imgContainer);
 };
 
