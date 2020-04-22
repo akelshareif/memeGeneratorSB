@@ -18,8 +18,8 @@ const createMeme = (imgURL, textInputs) => {
     img.setAttribute('src', imgURL);
     img.setAttribute('class', 'imgSize');
 
-    topText.setAttribute('class', 'topTextPlacement');
-    bottomText.setAttribute('class', 'bottomTextPlacement');
+    topText.setAttribute('class', 'topTextStyles');
+    bottomText.setAttribute('class', 'bottomTextStyles');
 
     imgContainer.appendChild(topText);
     imgContainer.appendChild(img);
