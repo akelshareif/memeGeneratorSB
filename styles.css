@@ -111,6 +111,18 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    width: 90%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: rgb(1, 169, 206);
+    margin-bottom: 10px;
+}
+
 form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -182,6 +194,17 @@ input {
         text-shadow: 1px 1px 5px rgb(203, 203, 203);
         color: rgb(1, 169, 206);
         margin-bottom: 10px;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 5px rgb(203, 203, 203);
+        color: rgb(1, 169, 206);
+        margin-bottom: 20px;
     }
 
     #btn:hover {
