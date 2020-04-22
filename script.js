@@ -35,7 +35,6 @@ form.addEventListener('submit', function (e) {
 
     createMeme(imgURL.value, textInputs);
 
-    imgURL.value = '';
     textInputs.forEach((input) => {
         input.value = '';
     });
